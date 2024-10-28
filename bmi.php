@@ -6,6 +6,9 @@
     <title>計算BMI</title>
 </head>
 <body>
+    <div>
+        <a href="index.html">回首頁</a>
+    </div>
     <?php
     if(isset($_GET['bmi'])){
         echo "你上一次量測的BMI值為{$_GET['bmi']}";
