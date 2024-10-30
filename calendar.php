@@ -13,11 +13,19 @@
         /* background:rgb(<?=rand(50,250);?>,<?=rand(50,250);?>,<?=rand(50,250);?>); */
         margin:auto;
     }
+    h1{
+        text-align: center;
+    }
+    ul li{
+        text-align: center;
+        list-style: none;
+    }
     td{
         padding:5px 10px;
         text-align: center;
         border:1px solid #999;
         width: 65px;
+        font-size:20px;
     }
     .holiday{
         background:pink;
@@ -80,6 +88,10 @@ if($month+1>12){
 $spDate=['2024-11-07'=>'立冬',
          '2024-06-10'=>'端午節',
          '2024-09-17'=>'中秋節',
+         '2025-06-20'=>'端午節',
+         '2025-09-27'=>'中秋節',
+         '2026-06-30'=>'端午節',
+         '2026-10-07'=>'中秋節',
          '2024-11-22'=>'小雪'];
 $holidays = [
     '01-01' => "元旦",
