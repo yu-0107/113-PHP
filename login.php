@@ -50,15 +50,27 @@
     </style>
 </head>
 <body>
-
+<?php
+session_start();
+if(!isset($_SESSION['login'])){
+?>
     <div class="login-container">
         <h2>登入</h2>
-        <form action="check.acc.php" method="post">
+        <form action="check_acc.php" method="post">
             <input type="text" name="acc" placeholder="使用者名稱" required>
             <input type="password" name="pw" placeholder="密碼" required>
             <input type="submit" value="登入">
         </form>
     </div>
 
+    <?php
+}else{
+?>
+        <div>
+            你已登入
+        </div>
+<?php
+}
+?>
 </body>
 </html>
