@@ -7,11 +7,25 @@
     <title>萬年曆</title>
 </head>
 
-<body>
+<body class="<?php echo ($_GET['month'] % 2 == 0) ? 'even-month' : 'odd-month'; ?>">
     <h1>CALENDAR</h1>
     <style>
         body {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body.odd-month {
+            background-image: url(https://truth.bahamut.com.tw/s01/202405/forum/75400/78f220646885db5b6ca9f0be2693257e.JPG);
+            background-size: cover;
+            /* 背景圖片會覆蓋整個區域 */
+            background-position: center center;
+            /* 圖片置中 */
+            background-attachment: fixed;
+            /* 當滾動頁面時背景保持不動 */
+            background-size: contain;
+        }
+
+        body.even-month {
             background-image: url(https://truth.bahamut.com.tw/s01/202405/forum/75400/631e13fc3b9c3454a7a96646c0c4c0ea.JPG);
             background-size: cover;
             /* 背景圖片會覆蓋整個區域 */
@@ -22,13 +36,15 @@
             background-size: contain;
         }
 
+        
+
         h1 {
             text-align: center;
             font-size: 50px;
             padding: 20px;
             font-family: "Permanent Marker", serif;
             font-style: normal;
-            
+
         }
 
         table {
@@ -49,9 +65,10 @@
             font-size: 21px;
             font-weight: 500;
         }
-        td:hover{
-        background-color: skyblue;
-        transition: 1s;
+
+        td:hover {
+            background-color: skyblue;
+            transition: 1s;
         }
 
         .holiday {
@@ -84,7 +101,7 @@
             border: 3px solid skyblue;
             background-color: lightblue;
             padding-bottom: 10px;
-            padding:10px;
+            padding: 10px;
         }
 
         .nav table td {
