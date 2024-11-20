@@ -15,7 +15,7 @@
         }
 
         body.odd-month {
-            background-image: url(https://truth.bahamut.com.tw/s01/202405/forum/75400/78f220646885db5b6ca9f0be2693257e.JPG);
+            background-image: url(https://truth.bahamut.com.tw/s01/202405/forum/75400/35e607426bfa870c6a6d524b547808d9.JPG?w=1000);
             background-size: cover;
             /* 背景圖片會覆蓋整個區域 */
             background-position: center center;
