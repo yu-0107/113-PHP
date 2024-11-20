@@ -12,14 +12,14 @@
     <style>
         body {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW_AIxhtlcDDhsoH9PG6fyKbDBiXhrpxK-ag&s");
+            background-image: url(https://truth.bahamut.com.tw/s01/202405/forum/75400/631e13fc3b9c3454a7a96646c0c4c0ea.JPG);
             background-size: cover;
             /* 背景圖片會覆蓋整個區域 */
             background-position: center center;
             /* 圖片置中 */
             background-attachment: fixed;
             /* 當滾動頁面時背景保持不動 */
-
+            background-size: contain;
         }
 
         h1 {
@@ -28,15 +28,16 @@
             padding: 20px;
             font-family: "Permanent Marker", serif;
             font-style: normal;
-
+            
         }
 
         table {
             border-collapse: collapse;
             margin: auto;
             width: 90%;
-            max-width: 800px;
+            max-width: 1000px;
             border: 3px solid skyblue;
+            background-color: white;
         }
 
         td {
@@ -48,6 +49,10 @@
             font-size: 21px;
             font-weight: 500;
         }
+        td:hover{
+        background-color: skyblue;
+        transition: 1s;
+        }
 
         .holiday {
             color: red;
@@ -58,7 +63,7 @@
         }
 
         .today {
-            background: blue;
+            background: lightskyblue;
             color: white;
             font-weight: bolder;
         }
@@ -79,6 +84,7 @@
             border: 3px solid skyblue;
             background-color: lightblue;
             padding-bottom: 10px;
+            padding:10px;
         }
 
         .nav table td {
@@ -271,7 +277,9 @@ for ($i = 0; $i < 6; $i++) {
             echo "</span>";
         }
         if (isset($holidays[date("m-d", $theDayTime)])) {
+            echo "<span class='spDate'>";
             echo "<br>{$holidays[date("m-d", $theDayTime)]}";
+            echo "</span>";
         }
         echo "</td>";
         
